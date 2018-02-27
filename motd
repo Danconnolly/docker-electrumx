@@ -1,5 +1,10 @@
-Bienvenue sur le serveur $VERSION de Nyanloutre !
+Welcome to an ElectrumX server.
 
-Fonctionne actuellement avec $DAEMON_SUBVERSION
+Bitcoin version: $DAEMON_VERSION
+Bitcoin subversion: $DAEMON_SUBVERSION
 
-Vous pouvez me remercier pour ce service a cette adresse : $DONATION_ADDRESS
+ElectrumX version: $SERVER_VERSION
+ElectrumX subversion: $SERVER_SUBVERSION
+
+Donation address: $DONATION_ADDRESS
+

@@ -1,6 +1,6 @@
 FROM python:3
 
-ARG ELECTRUMX_VERSION=1.0.11
+ARG ELECTRUMX_VERSION=1.2.1
 
 RUN apt-get update && \
     apt-get install libleveldb-dev -y && \
@@ -18,7 +18,7 @@ ENV SSL_PORT=50002
 ENV SSL_CERTFILE=/srv/db/server.crt
 ENV SSL_KEYFILE=/srv/db/server.key
 
-ENV DONATION_ADDRESS=15t4BEbJk8rUguSRHvbxrr1io6hbicvEpK
+ENV DONATION_ADDRESS=none
 
 COPY motd /srv/motd
 
