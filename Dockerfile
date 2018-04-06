@@ -9,6 +9,7 @@ RUN apt-get update && \
     mkdir /srv/db && \
     chown electrumx:electrumx /srv/db
 
+ENV COIN=BitcoinCash
 ENV DB_DIRECTORY=/srv/db
 ENV DAEMON_URL=electrumx:electrumx@bitcoind
 ENV HOST=
