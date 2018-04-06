@@ -15,8 +15,8 @@ ENV HOST=
 ENV TCP_PORT=50001
 
 ENV SSL_PORT=50002
-ENV SSL_CERTFILE=/srv/db/server.crt
-ENV SSL_KEYFILE=/srv/db/server.key
+ENV SSL_CERTFILE=/srv/server.crt
+ENV SSL_KEYFILE=/srv/server.key
 
 ENV DONATION_ADDRESS=none
 
