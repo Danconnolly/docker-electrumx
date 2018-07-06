@@ -1,6 +1,6 @@
 FROM python:3
 
-ARG ELECTRUMX_VERSION=1.2.1
+ARG ELECTRUMX_VERSION=1.4.3
 
 RUN apt-get update && \
     apt-get install libleveldb-dev -y && \
@@ -29,5 +29,7 @@ USER electrumx
 VOLUME /srv/db
 EXPOSE 50001
 EXPOSE 50002
+EXPOSE 53001
+EXPOSE 53002
 
 ENTRYPOINT ["electrumx_server.py"]
