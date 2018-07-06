@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3.6
 
 ARG ELECTRUMX_VERSION=1.4.3
 
@@ -9,28 +9,23 @@ RUN apt-get update && \
     mkdir /srv/db && \
     chown electrumx:electrumx /srv/db
 
+COPY entrypoint.sh /entrypoint.sh
+COPY motd /srv/motd
+
 ENV COIN=BitcoinCash
 ENV DB_DIRECTORY=/srv/db
-ENV DAEMON_URL=electrumx:electrumx@bitcoind
-ENV HOST=
+ENV DAEMON_HOST=localhost
+ENV DAEMON_PORT=8333
 ENV TCP_PORT=50001
-
 ENV SSL_PORT=50002
 ENV SSL_CERTFILE=/srv/server.crt
 ENV SSL_KEYFILE=/srv/server.key
-
 ENV DONATION_ADDRESS=none
-
-COPY motd /srv/motd
-
 ENV BANNER_FILE=/srv/motd
 
 USER electrumx
-
 VOLUME /srv/db
-EXPOSE 50001
-EXPOSE 50002
-EXPOSE 53001
-EXPOSE 53002
+EXPOSE 50001 50002 53001 53002
+CMD ["electrumx_server.py"]
+ENTRYPOINT ["/entrypoint.sh"]
 
-ENTRYPOINT ["electrumx_server.py"]
