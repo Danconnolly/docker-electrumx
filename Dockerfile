@@ -25,7 +25,7 @@ ENV BANNER_FILE=/srv/motd
 
 USER electrumx
 VOLUME /srv/db
-EXPOSE 50001 50002 53001 53002
+EXPOSE 50001 50002 51001 51002
 CMD ["electrumx_server.py"]
 ENTRYPOINT ["/entrypoint.sh"]
 
