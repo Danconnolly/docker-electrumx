@@ -1,6 +1,6 @@
 FROM python:3.6
 
-ARG ELECTRUMX_VERSION=1.4.3
+ARG ELECTRUMX_VERSION=1.7.3
 
 RUN apt-get update && \
     apt-get install libleveldb-dev -y && \
@@ -26,6 +26,6 @@ ENV BANNER_FILE=/srv/motd
 USER electrumx
 VOLUME /srv/db
 EXPOSE 50001 50002 51001 51002
-CMD ["electrumx_server.py"]
+CMD ["electrumx_server"]
 ENTRYPOINT ["/entrypoint.sh"]
 

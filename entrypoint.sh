@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ "$1" == "electrumx_server.py" ]]; then
+if [[ "$1" == "electrumx_server" ]]; then
 	CMD="$1"
 	shift
 	if [[ -s "/run/secrets/bchrpcuser" ]]; then
