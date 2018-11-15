@@ -22,6 +22,7 @@ ENV SSL_CERTFILE=/srv/server.crt
 ENV SSL_KEYFILE=/srv/server.key
 ENV DONATION_ADDRESS=none
 ENV BANNER_FILE=/srv/motd
+ENV HOST=""
 
 USER electrumx
 VOLUME /srv/db
