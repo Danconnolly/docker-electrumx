@@ -1,6 +1,6 @@
 FROM python:3.6.6-jessie
 
-ARG ELECTRUMX_VERSION=1.8.12
+ARG ELECTRUMX_VERSION=f7371e7a71c90017d4dd60be6272dc868bcbf672
 
 RUN apt-get update && \
     apt-get install libleveldb-dev -y && \
@@ -12,7 +12,7 @@ RUN apt-get update && \
 COPY entrypoint.sh /entrypoint.sh
 COPY motd /srv/motd
 
-ENV COIN=BitcoinCash
+ENV COIN=BitcoinSV
 ENV DB_DIRECTORY=/srv/db
 ENV DAEMON_HOST=localhost
 ENV DAEMON_PORT=8333
