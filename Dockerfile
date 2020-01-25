@@ -1,4 +1,4 @@
-FROM python:3.6.6-jessie
+FROM python:3.7.6-buster
 
 ARG ELECTRUMX_VERSION=1.14.0
 
