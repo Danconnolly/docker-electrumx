@@ -1,6 +1,6 @@
 FROM python:3.6.6-jessie
 
-ARG ELECTRUMX_VERSION=fcc62b4762e3f2eae574430d28d4e44d245a7e16
+ARG ELECTRUMX_VERSION=1.14.0
 
 RUN apt-get update && \
     apt-get install libleveldb-dev -y && \
