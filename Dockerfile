@@ -1,6 +1,6 @@
-FROM python:3.7.6-buster
+FROM python:3.12-rc-buster
 
-ARG ELECTRUMX_VERSION=1.14.0
+ARG ELECTRUMX_VERSION=1.20.2
 
 RUN apt-get update && \
     apt-get install libleveldb-dev -y && \
