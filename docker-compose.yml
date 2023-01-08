@@ -1,0 +1,10 @@
+services:
+  electrumx:
+    image: dconnolly/electrumx
+    environment:
+      DAEMON_URL: http://username:password@host:port/
+    volumes:
+      - exdb:/srv/db
+volumes:
+  exdb:
+
